@@ -2,6 +2,8 @@ const Location = require('../model/Location')
 const assignLocation = async (req, res) => {
     const {
         link,
+        ownerName,
+        ownerContact,
         memberName,
         memberId,
         collectionStatus
@@ -9,6 +11,8 @@ const assignLocation = async (req, res) => {
     try {
         const location = await Location.create({
             link,
+            ownerName,
+            ownerContact,
             memberName,
             memberId,
             collectionStatus
@@ -52,4 +56,15 @@ const updateStatus = async (req, res) => {
     return res.status(200).json(updatedLocation);
 }
 
-module.exports = { assignLocation, fetchLocations,updateStatus };
+const fetchAllLocations = async (req,res) => {
+    try{
+        const locations = await Location.find();
+        if(!locations)
+            return res.status(400).json({error:"No locations found"});
+        return res.status(200).json(locations);
+    }catch(error){
+        return res.status(500).json({error:"An error occurred"})
+    }
+}
+
+module.exports = { assignLocation, fetchLocations,updateStatus,fetchAllLocations };

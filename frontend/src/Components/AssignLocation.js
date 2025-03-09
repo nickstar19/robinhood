@@ -6,6 +6,8 @@ const AssignLocation = () => {
     const [members, setMembers] = useState([]);
     const [formData,setFormData] = useState({
         link : '',
+        ownerName:'',
+        ownerContact:0,
         memberName : '',
         memberId : '',
         collectionStatus:0
@@ -55,6 +57,22 @@ const AssignLocation = () => {
                             name="link"
                             onChange={handleChange}
                             value={formData.link}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label for="inputName4">Owner's Name</label>
+                        <input type="text" className="form-control" id="inputName4" placeholder="Name"
+                            name="ownerName"
+                            onChange={handleChange}
+                            value={formData.ownerName}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label for="inputContact4">Owner's Name</label>
+                        <input type="number" className="form-control" id="inputContact4" placeholder="Contact"
+                            name="ownerContact"
+                            onChange={handleChange}
+                            value={formData.ownerContact}
                         />
                     </div>
                     <div className='form-group'>

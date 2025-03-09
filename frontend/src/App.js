@@ -9,6 +9,7 @@ import AddMember from './Components/AddMember';
 import AssignLocation from './Components/AssignLocation';
 import MemberDashboard from './Components/MemberDashboard';
 import MemberLocations from './Components/MemberLocations';
+import AssignList from './Components/AssignList';
 function App() {
   return (
     <div>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/assignlocation" element={<AssignLocation/>}></Route>
           <Route path="/memberdashboard" element={<MemberDashboard/>}></Route>
           <Route path="/memberlocations" element={<MemberLocations/>}></Route>
+          <Route path="/alllocations" element={<AssignList/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

@@ -5,6 +5,14 @@ const locationSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    ownerName:{
+        type:String,
+        required:false
+    },
+    ownerContact:{
+        type:Number,
+        required:false
+    },
     memberId:{
         type:String,
         required:false

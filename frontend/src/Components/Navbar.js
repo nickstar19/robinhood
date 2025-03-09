@@ -28,6 +28,9 @@ const Navbar = () => {
                                         <li className="nav-item active">
                                             <Link className="nav-link" to="/assignlocation">Assign Location</Link>
                                         </li>
+                                        <li className="nav-item active">
+                                            <Link className="nav-link" to="/alllocations">All Locations</Link>
+                                        </li>
                                     </>
                                 ) : (
                                     <>
