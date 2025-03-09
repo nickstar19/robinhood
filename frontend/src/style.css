@@ -1,0 +1,19 @@
+
+:root {
+    --primary-color: rgba(0, 0, 0, 0.851);
+    --secondary-color:white;
+  }
+.signup{
+    
+    margin-top: 5%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 
+                0 0 20px rgba(0, 0, 0, 0.1), 
+                0 0 20px rgba(0, 0, 0, 0.1), 
+                0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 4%;
+    border-radius: 30px;
+}
+button{
+    background-color: var(--primary-color);
+    color:var(--secondary-color)
+}
