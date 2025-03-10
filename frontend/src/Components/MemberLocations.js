@@ -10,7 +10,7 @@ const MemberLocations = () => {
     useEffect((e) => {
         const fetchLocations = async (req, res) => {
             try {
-                const response = await axios.get(`http://localhost:4000/location/memberlocations?memberId=${memberId}`);
+                const response = await axios.get(`https://robinhood-22em.vercel.app/location/memberlocations?memberId=${memberId}`);
                 setLocations(response.data);
             } catch (error) {
                 console.log(error);
@@ -21,7 +21,7 @@ const MemberLocations = () => {
     const handleClick = async (locationId) => {
 
         try {
-            const updatedLocation = await axios.post("http://localhost:4000/location/updatestatus", { locationId });
+            const updatedLocation = await axios.post("https://robinhood-22em.vercel.app/location/updatestatus", { locationId });
             alert('status updated');
             setLocations(prevLocations => 
                 prevLocations.map(location => 
