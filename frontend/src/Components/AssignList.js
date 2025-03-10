@@ -8,7 +8,7 @@ const AssignList = () => {
     useEffect(() => {
         const fetchAllLocations = async () => {
             try {
-                const response = await axios.get("http://localhost:4000/location/fetchalllocations");
+                const response = await axios.get("https://robinhood-22em.vercel.app/location/fetchalllocations");
                 setLocations(response.data);
             } catch (error) {
                 console.log(error)
