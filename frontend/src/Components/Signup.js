@@ -26,7 +26,7 @@ const Signup = () => {
             setErrorMessage('');
 
         try{
-            const response = await axios.post('http://localhost:4000/user/signup',formData);
+            const response = await axios.post('https://robinhood-22em.vercel.app/user/signup',formData);
             console.log(response.data);
             navigate('/signin')
 
