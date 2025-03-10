@@ -17,3 +17,22 @@ button{
     background-color: var(--primary-color);
     color:var(--secondary-color)
 }
+.bg{
+    background-image: url('./images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100vh; /* Full screen height */
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .bg{
+        background-image: url('./images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100vh; /* Full screen height */
+    color: white;
+    }
+}
