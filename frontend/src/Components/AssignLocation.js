@@ -28,7 +28,7 @@ const AssignLocation = () => {
     useEffect(() => {
         const getAddedMembers = async () => {
             try {
-                const response = await axios.get("http://localhost:4000/admin/addedmembers");
+                const response = await axios.get("https://robinhood-22em.vercel.app/admin/addedmembers");
                 setMembers(response.data);
             } catch (error) {
                 console.log(error);
@@ -39,7 +39,7 @@ const AssignLocation = () => {
     const handleSubmit = async (event) =>{
         event.preventDefault();
         try{
-            const response = await axios.post('http://localhost:4000/location/assignlocation',formData);
+            const response = await axios.post('https://robinhood-22em.vercel.app/location/assignlocation',formData);
             console.log(response.data);
             alert('Location Assigned')
         }catch(error){
