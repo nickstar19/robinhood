@@ -6,7 +6,7 @@ const AddMember = () => {
   useEffect(() => {
     const fetchMembers = async () =>{
       try{
-      const response = await axios.get("http://localhost:4000/admin/fetchMembers"); 
+      const response = await axios.get("https://robinhood-22em.vercel.app/admin/fetchMembers"); 
       setMembersList(response.data);
       
       console.log(response.data)
@@ -21,7 +21,7 @@ const AddMember = () => {
   const handleClick = async (userId) => {
    
     try{
-      const updatedUser = await axios.post("http://localhost:4000/admin/updateStatus",{userId});
+      const updatedUser = await axios.post("https://robinhood-22em.vercel.app/admin/updateStatus",{userId});
       alert('status updated');
       setMembersList(prevMembers =>
         prevMembers.map(member =>
