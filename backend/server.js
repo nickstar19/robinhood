@@ -10,9 +10,15 @@ app.use(express.json());
 app.use(cors());
 const PORT = 4000;
 const dbUrl = process.env.DB_URL;
+
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+});
+
 app.use("/user",userRoutes);
 app.use("/admin",adminRoutes)
 app.use("/location",locationRoutes);
+
 mongoose.connect(dbUrl)
     .then(() => {
         app.listen(PORT, () => {
